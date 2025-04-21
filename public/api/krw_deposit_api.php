@@ -7,8 +7,8 @@ use Firebase\JWT\JWT;
 header('Content-Type: application/json; charset=utf-8');
 
 // 환경변수에서 API 키 불러오기
-$accessKey = '9b75dcaf4a9bda06be676d17fbca1fcc7aac22b676dbe8';
-$secretKey = 'YTQxN2I4ZDA4MTZmODkwMmRhYWI0ZjlkZGEwMGNlMTc2YjE0ZmJjYjFmY2M3ZWFmMjBiMjc2ZDdlMDhjMA==';
+$accessKey = 'real key';
+$secretKey = 'real key';
 
 $params = [];
 if (isset($_GET['state'])) {
