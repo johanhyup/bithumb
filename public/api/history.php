@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 require("xcoin_api_client.php");
-$api = new XCoinAPI("aad3915f9e1d4f57131384317d41771a", "849725c5fc2adbfde63dad46b0ed9121");
+$api = new XCoinAPI("real key", "real key");
 
 $rgParams['offset']           = '0';
 $rgParams['count']            = '20';
