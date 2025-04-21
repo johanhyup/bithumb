@@ -5,8 +5,8 @@ use Firebase\JWT\JWT;
 
 header('Content-Type: application/json; charset=utf-8');
 
-$accessKey = '9b75dcaf4a9bda06be676d17fbca1fcc7aac22b676dbe8';
-$secretKey = 'YTQxN2I4ZDA4MTZmODkwMmRhYWI0ZjlkZGEwMGNlMTc2YjE0ZmJjYjFmY2M3ZWFmMjBiMjc2ZDdlMDhjMA==';
+$accessKey = 'real key';
+$secretKey = 'real key';
 
 // POST 데이터 수신
 $orderCurrency   = strtoupper($_POST['order_currency']   ?? '');
