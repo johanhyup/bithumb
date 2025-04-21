@@ -1,0 +1,14 @@
+/* krw_deposit.php 와 동일한 스타일 복사 */
+* { box-sizing: border-box; margin:0; padding:0; }
+
+.header{ height:50px; display:flex; align-items:center; border-bottom:1px solid #eee; font-size:18px; font-weight:500; padding:0 18px; }
+.header .back{ font-size:22px; margin-right:10px; cursor:pointer; }
+.header .tab{ color:#222; font-size:14px; font-weight:700; letter-spacing:-0.01em; }
+.balance-box{ margin:18px 0; background:#f8f9fb; border-radius:9px; padding:18px; }
+.balance-info{ display:flex; justify-content:space-between; align-items:end; }
+.balance-info .left{ font-size:13px; color:#666; }
+.balance-info .right .totals{ font-size:18px; font-weight:700; color:#222; }
+.bal-btns{ display:flex; gap:4px; margin:20px 0; padding: 8px;}
+.bal-btns button{ flex:1; height:38px; background:#fff; border:none; border-radius:8px; font-size:14px; color:#222; font-weight:500; box-shadow:0 1px 3px rgba(0,0,0,0.03); cursor:pointer; }
+.bal-btns button.selected{ background:#292929; color:#fff; }
+/* 이하 필요 시 krw_deposit.php 스타일 그대로 복사 */

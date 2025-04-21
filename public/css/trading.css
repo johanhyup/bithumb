@@ -1,0 +1,256 @@
+@charset "UTF-8";
+* {
+  margin: 0 ; padding: 0; box-sizing: border-box;
+}
+body { margin: 0; font-family: sans-serif; background: #fff; }
+.page-wrap {
+  display: flex; 
+  flex-direction: column; 
+  height: 100vh; 
+  overflow: hidden;
+}
+.header-area {
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  display: flex; 
+  align-items: flex-start;
+
+}
+.symbol-info { flex: 1; }
+.symbol-line {
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.back-arrow { 
+  cursor: pointer; 
+  user-select: none; 
+  font-size: 20px; 
+}
+.symbol-text { white-space: nowrap; }
+.big-price {
+  font-size: 20px; 
+  font-weight: bold; 
+  margin-bottom: 6px;
+}
+.big-price.up { color: black; }
+.big-price.down { color: black; }
+.price-change-line { font-size: 12px; }
+.price-change.up { color: red; }
+.price-change.down { color: blue; }
+.price-change-rate.up { color: red; }
+.price-change-rate.down { color: blue; }
+
+/* 차트 270폭 */
+.chart-area {
+  position: relative;
+  width: 210px; 
+  height: 100px;
+  border: 1px solid #ccc; 
+  background-color: #fafafa;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+#miniChart { background: #fff; }
+.chart-volume {
+  position: absolute; 
+  bottom: 2px; 
+  right: 4px;
+  font-size: 10px; 
+  color: #666;
+}
+
+/* 상단 탭 (주문, 호가, 차트) -> 주황색 밑줄 */
+.tabs-area {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: #fff;
+}
+.trade-tab {
+  flex: 1;
+  padding: 6px;
+  font-size: 10px; 
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.trade-tab-active {
+  font-weight: bold;
+  border-bottom-color: #ff6600; /* 주황색 */
+}
+
+/* 메인 레이아웃 */
+.content-area {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+/* 왼쪽 호가창 */
+.orderbook-container {
+  width: 35%;
+  position: relative;
+  overflow: hidden;
+  font-size: 10px;
+}
+.orderbook-list {
+  position: absolute;
+  top: 0; 
+  bottom: 0; 
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.orderbook-list::-webkit-scrollbar { width: 0; }
+.orderbook-item {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 4px 8px; 
+  border: 1px solid #fff;
+}
+.ask-bg { background-color: #e6f5ff; }
+.bid-bg { background-color: #ffeaea; }
+.orderbook-price.up { color: red; }
+.orderbook-price.down { color: blue; }
+.orderbook-qty { color: #000; }
+
+/* 호가 클릭시 강조 애니메이션 */
+.highlight-anim {
+  animation: highlight-border 0.8s forwards;
+}
+@keyframes highlight-border {
+  0%   { border-color: #fff; }
+  100% { border-color: #000; }
+}
+
+/* 오른쪽: 매수/매도 + 체결내역 */
+.right-side {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* 매수/매도 폼 */
+.trade-forms {
+  flex: 1;
+  
+  padding: 0 8px;
+  border-bottom: 1px solid #ccc;
+}
+.trade-form-header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  
+}
+.trade-form-header > div {
+  flex: 1;
+  text-align: center;
+  padding: 6px;
+  font-size: 10px; 
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+/* 매수/매도 탭 활성시 주황색 */
+.trade-form-header .active {
+  font-weight: bold;
+  border-bottom-color: #ff6600 !important;
+}
+
+.form-section { 
+  padding: 12px;
+  font-size: 12px;
+}
+.available-wrap {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 9.5px;
+}
+.form-input {
+  width: 92%;
+  box-sizing: border-box;
+  padding: 6px;
+  text-align: right;
+}
+.form-input::placeholder {
+  color: #999;
+  text-align: left;
+}
+.price-input-wrapper, .amount-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.updown-buttons {
+  display: flex; 
+  flex-direction: column;
+}
+.updown-buttons button {
+
+  margin: 1px 0;
+  cursor: pointer;
+}
+.range-wrap { margin-bottom: 8px; }
+.range-input { width: 100%; }
+.range-markers {
+  display: flex; 
+  justify-content: space-between; 
+  font-size: 10px; 
+  margin: 4px 0;
+  user-select: none;
+}
+.range-markers span { cursor: pointer; }
+.total-amount { margin-top: 12px; font-weight: bold; }
+.btn-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.btn-row button {
+  flex: 1;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* 체결내역 */
+.transaction-box {
+  flex: 1;
+  
+  display: flex; 
+  flex-direction: column;
+  overflow: hidden;
+}
+/* 헤더 고정, 리스트만 스크롤 */
+.transaction-header {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.transaction-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+.trade-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  padding: 4px 0;
+}
+.trade-item.up { color: red; }
+.trade-item.down { color: blue; }

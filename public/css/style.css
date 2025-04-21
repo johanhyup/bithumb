@@ -1,0 +1,475 @@
+@charset "UTF-8";
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  background-color: #f5f5f5 !important;
+}
+html, body {
+  width: 100%; 
+  height: 100%; 
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: #fff; 
+  color: #1c2028;
+  font-size: 14px; /* 모바일 기준 */
+  line-height: 1.4;
+  -webkit-text-size-adjust: none; /* 모바일 자동 폰트 확대 방지 */
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+
+/* 상단 2단 탭 (예: 거래소/시장동향, etc.) */
+.bth-top-menu {
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+.bth-top-menu__item {
+  flex:1;
+  text-align: center;
+  line-height: 44px;
+  font-size: 15px;
+  color: #666;
+}
+.bth-top-menu__item-active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* 메인 탭(원화/BTC/보유/관심) */
+.bth-tab-container {
+  display: flex;
+  height: 44px;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+.bth-tab-item {
+  flex:1;
+  text-align: center;
+  line-height: 44px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 2px solid transparent;
+}
+.bth-tab-item.bth-tab-active {
+  color: #000;
+  border-bottom-color: #ff6600;
+}
+
+/* 옵션 탭 (전체/메이저/일반/신규/거래유의/레이어1 등) */
+.bth-option-tab-container {
+  display: flex;
+  overflow-x: auto;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+.bth-option-tab-item {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #666;
+  margin: 0 10px;
+  line-height: 36px;
+}
+.bth-option-tab-item.bth-option-active {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* 거래소: 코인 리스트 스타일 수정 */
+/* 코인리스트 영역을 감싸는 컨테이너 (좌우 padding 동일 적용) */
+.coin-list-container {
+  padding: 0 2px; /* 헤더와 아이템 모두 좌우 16px 간격 */
+}
+
+/* 코인리스트 헤더 */
+.coin-list__header {
+  display: flex;
+  background: #f9f9f9;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #666;
+  width: 100%;
+}
+
+.coin-list__header > div {
+  flex: 1;
+  text-align: center;
+}
+
+/* 이름 컬럼은 왼쪽 정렬 및 살짝 넓게 */
+.coin-list__header .name-col {
+
+  text-align: left;
+  
+}
+
+/* 이름 컬럼은 왼쪽 정렬 및 살짝 넓게 */
+.coin-list__header .name-col1 {
+  text-align: right;
+}
+/* 이름 컬럼은 왼쪽 정렬 및 살짝 넓게 */
+.coin-list__header .name-col2 {
+  text-align: right;
+  flex: none;
+  width: 55px;
+}
+/* 이름 컬럼은 왼쪽 정렬 및 살짝 넓게 */
+.coin-list__header .name-col3 {
+  text-align: right;
+  flex: none;
+  width: 75px;
+}
+
+
+/* 코인 아이템 (내용) */
+.coin-list .coin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0; /* 컨테이너의 좌우 padding 활용 */
+  border-bottom: 1px solid #ebebeb;
+  font-size: 11px;
+  font-weight: bolder;
+}
+
+.coin-list .coin-item__name,
+.coin-list .coin-item__current,
+.coin-list .coin-item__change,
+.coin-list .coin-item__volume {
+  /* 헤더 비율과 동일하게 설정 */
+}
+
+.coin-list .coin-item__name {
+
+  text-align: center;
+
+
+  
+}
+
+.coin-list .coin-item__current,
+.coin-list .coin-item__change,
+.coin-list .coin-item__volume {
+  flex: 1;
+  text-align: center;
+}
+
+
+
+.coin-list .coin-item__current {
+  text-align: right;
+  padding-right: 5px;
+
+
+}
+.coin-list .coin-item__change {
+  text-align: right;
+  padding-right: 5px;
+  width: 55px;
+  flex: none;
+
+}
+
+.coin-list .coin-item__volume {
+  text-align: right;
+  padding-right: 5px;
+  width: 75px;
+  flex: none;
+}
+
+/* 자산현황 상단 (어두운 배경) */
+.asset-header {
+  background: #111c2d;
+  color: #fff;
+  padding: 16px;
+}
+.asset-header__balance {
+  font-size: 24px; 
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.asset-header__info {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 새 하단 고정 네비게이션 디자인 */
+.bth-bottom-nav {
+  position: fixed;
+  bottom: 0;
+
+  right: 0;
+  height: 50px;
+  background: linear-gradient(135deg, #1f1f1f, #353535);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  z-index: 10000;
+
+  /* 네비게이션 아이템 간의 구분을 없애고 깔끔하게 */
+}
+
+.bth-bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #aaa;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.bth-bottom-nav__item svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  margin-bottom: 4px;
+  transition: fill 0.3s;
+}
+
+/* 밑줄 효과 */
+.bth-bottom-nav__item::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #ff6600;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+.bth-bottom-nav__item:hover {
+  color: #ff6600;
+  transform: translateY(-4px);
+}
+
+.bth-bottom-nav__item:hover::after {
+  width: 50%;
+}
+
+/* 활성화된 아이템 */
+.bth-bottom-nav__item-active {
+  color: #ff6600;
+}
+
+.bth-bottom-nav__item-active::after {
+  width: 50%;
+}
+
+/* 페이지 본문 위치 */
+.page-container {
+  padding-top: 48px;  /* 헤더 높이 */
+  padding-bottom: 60px; /* 하단 탭 높이 */
+}
+
+/* 매수/매도 UI 개선 CSS */
+.order-panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  overflow: hidden;
+}
+
+.order-panel__tabs {
+  display: flex;
+  background: #f5f5f5;
+}
+
+.order-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  color: #666;
+  font-size: 16px;
+}
+
+.order-tab-active {
+  background: #ff6600;
+  color: #fff;
+  font-weight: bold;
+}
+
+.order-form {
+  padding: 16px;
+}
+
+.order-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.order-form-row label {
+  width: 100px;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-form-row input {
+  flex: 1;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  transition: border-color 0.2s;
+}
+
+.order-form-row input:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+.order-btn {
+  background: #ff6600;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background: #e05500;
+}
+
+/* 스크롤바 커스텀 (크롬 등) */
+::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* 모달 (필요시) */
+.modal-backdrop {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.modal-backdrop.active {
+  display: flex;
+}
+.modal-content {
+  width: 80%;
+  max-width: 400px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+
+
+
+.bth-tab-container { display: flex; border-bottom: 1px solid #ccc; }
+.bth-tab-item { flex: 1; text-align: center; cursor: pointer; }
+.bth-tab-active { font-weight: bold; border-bottom: 2px solid #2e6fe7; }
+
+.coin-list__header { display: flex; border-bottom: 1px solid #ccc; }
+.coin-list__header > div { flex: 1; text-align: center; }
+.coin-list { padding: 0px; }
+
+
+
+.coin-item { padding: 10px; border-bottom: 1px solid #ebebeb; }
+.coin-item a { display: flex; width: 100%; color: inherit; text-decoration: none; }
+.coin-item__name { 
+  flex: 2; 
+  text-align: left !important;
+  padding-left: 8px; /* 여백 조절용 */
+}
+.coin-item__current, .coin-item__change, .coin-item__volume { flex: 1; text-align: center; }
+.coin-item__chart {
+  background-color: rgba(158, 158, 158, 0.356);
+  width: 15px !important;
+
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+
+}
+.coin-item svg {
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin-left: -17px;
+
+
+
+
+
+}
+
+
+.up { color: red; }
+.down { color: blue; }
+
+
+/* 💡 모바일처럼 보일 컨테이너 */
+.mobile-wrapper {
+  max-width: 390px;
+  margin: 0 auto ;
+  min-height: 100vh ;
+  background: #fff ;
+  position: relative ;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 100vh;
+  overflow-y: auto;  /* ✅ 스크롤 여기에 생기게 만듬 */
+  
+
+}
+
+.mobile-wrapper::-webkit-scrollbar {
+  width: 1px;
+}
+
+.mobile-wrapper::-webkit-scrollbar-thumb {
+  background: transparent;  /* ✅ 스크롤바 손잡이 투명 */
+}
+
+.mobile-wrapper::-webkit-scrollbar-track {
+  background: transparent;  /* ✅ 스크롤바 트랙도 투명 */
+}
+
+.sort-btn {
+  font-size:  7px;
+}

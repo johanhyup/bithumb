@@ -1,0 +1,180 @@
+/* css/assets.css */
+@charset "UTF-8";
+
+/* 탭 콘텐츠 표시 토글 */
+.content { 
+  display: none; 
+  overflow-x: auto;
+  width: 100%;
+}
+
+.content table {
+  width: 100%;
+  min-width: 700px; /* 테이블 최소 너비 설정 (내용에 따라 조절 가능) */
+  border-collapse: collapse;
+}
+
+.content th, .content td {
+  white-space: nowrap;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.content-active { display: block; }
+
+
+#history-table thead th {
+  font-size: 10px; /* 원하는 크기로 조정 (기본보다 작게) */
+  padding: 6px 4px; /* 여백도 줄이려면 */
+}
+
+#history-table tbody td {
+  font-size: 10px; /* 원하는 크기로 조정 */
+  padding: 6px 4px; /* 셀 간 간격도 조정 가능 */
+}
+
+
+
+#orders-table thead th {
+  font-size: 10px; /* 원하는 크기로 조정 (기본보다 작게) */
+  padding: 6px 4px; /* 여백도 줄이려면 */
+}
+#orders-table tbody td {
+  font-size: 10px; /* 원하는 크기로 조정 */
+  padding: 6px 4px; /* 셀 간 간격도 조정 가능 */
+}
+
+
+
+#open-table thead th {
+  font-size: 10px; /* 원하는 크기로 조정 (기본보다 작게) */
+  padding: 6px 4px; /* 여백도 줄이려면 */
+}
+#open-table tbody td {
+  font-size: 10px; /* 원하는 크기로 조정 */
+  padding: 6px 4px; /* 셀 간 간격도 조정 가능 */
+}
+
+
+
+
+/* 자산현황 헤더 */
+.asset-header {
+  background: #111c2d;
+  color: #fff;
+  padding: 16px;
+}
+
+.asset-header-all{
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.asset-header__balance {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ff6600; /* 원하는 색상 */
+}
+
+
+
+.asset-header__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-label {
+  text-align: left;
+  color: #aaa;
+}
+
+.info-value {
+  text-align: right;
+  font-weight: bold;
+  color: #fff; /* 혹은 원하는 색상 */
+}
+
+/* 소액 숨기기 체크박스 */
+.hide-small {
+  display: block;
+  padding: 0 16px;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+/* 포트폴리오 리스트 */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px 16px;
+}
+
+/* 개별 자산 카드 */
+.asset-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.asset-card .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.asset-card .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* 거래내역 · 주문내역 · 미체결 테이블 공통 */
+#history-table,
+#orders-table,
+#open-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+#history-table th,
+#orders-table th,
+#open-table th {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+#history-table td,
+#orders-table td,
+#open-table td {
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 매수/매도 컬러 */
+.up   { color: red; }
+.down { color: blue; }

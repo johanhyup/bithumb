@@ -1,0 +1,19 @@
+{
+  "name": "bithumb11-(2)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chart.js": "^4.4.9",
+    "chartjs-chart-financial": "^0.2.1"
+  }
+}

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+* {
+  margin: 0 ; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background-color: #f5f5f5 !important;
+}
+
+
+/* 상단 탭 영역 */
+.dep-top-tab {
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+
+}
+.dep-top-tab button {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+.dep-top-tab button.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #ff6600;
+}
+
+/* 검색/알림 아이콘 영역 (우측) */
+.dep-top-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 8px 16px 8px 16px;
+}
+.dep-top-icons svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* 코인 리스트(좌: 코인명, 우: 보유수량, 평가액) */
+.coin-list {
+
+}
+.coin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ebebeb;
+  cursor: pointer;
+}
+.coin-left-text {
+  display: flex;
+  flex-direction: column;
+}
+.coin-left-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.coin-left-status {
+  font-size: 13px;
+  color: #e05500;
+  margin-top: 2px;
+}
+.coin-right {
+  text-align: right;
+}
+.coin-right-balance {
+  font-size: 15px;
+  font-weight: 600;
+}
+.coin-right-krw {
+  font-size: 13px;
+  color: #999;
+  margin-top: 3px;
+}
+
+/* 전체를 감싸는 페이지 컨테이너 */
+.page-container {
+
+}
+
+
+
+
+
+
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* 💡 header와 footer의 width를 mobile-wrapper에 맞추기 위해 relative 사용 */
+.bth-header,
+.bth-bottom-nav {
+  width: 100%;
+}
+
+/* 하단바 고정 위치 유지 (모바일 기준으로) */
+.bth-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  max-width: 390px;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
